@@ -26,8 +26,23 @@ let divide = function (a,b) {
 
 console.log(divide(6,3));
 
+let anyFunction = divide;
+console.log(anyFunction(30,5));
 
+//pass a function as a argument to other functions
 
+function sum(a,b) {
+  return a+b;
+}
+console.log(sum);
 
+function avarage(a,b,fn) {
+  return fn(a,b)/2;
+}
 
+let avrgRes = avarage(10,20,sum);
+console.log(avrgRes);
+
+avrgRes = avarage(10,20,multiply);
+console.log(avrgRes);
 

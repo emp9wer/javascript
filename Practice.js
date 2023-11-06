@@ -124,3 +124,63 @@ secondMax(numbers);
 
 
 
+console.log("----------------------------------");
+console.log('freq of chars2');
+
+function freqOfChars2(word) {
+let res=''
+for(let a =0; a<word.length; a++){
+  let count=0
+  for(let z =0; z<word.length; z++){
+      
+      if(word[z]==word[a]){
+        count++
+      }
+  }
+    if(!res.includes(word[a])){
+      res+=word[a]+''+count
+    }
+}
+return res
+}
+let a = 'aaabbddeeqqq'
+console.log(freqOfChars2(a));
+
+
+
+
+
+console.log("----------------------------");
+console.log("find min");
+
+function findMin(numbers) {
+  
+  let min = numbers[0]
+
+  for(let i = 0; i < numbers.length; i++){
+
+    if(numbers[i] < min){
+      min=numbers[i]
+    }
+
+  }
+return min
+}
+
+
+let numbers1 = new Array(1,4,63,5,2,1,-98,6,7,2);
+
+console.log(findMin(numbers1));
+
+let minimize = findMin;
+
+let z = minimize(numbers1)
+console.log(z);
+
+
+
+
+
+
+
+

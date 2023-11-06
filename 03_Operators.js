@@ -66,13 +66,6 @@ switch (month) {
     dayCount = 30;
     break;
 
-  case 4:
-  case 6:
-  case 9:
-  case 11:
-    dayCount = 30;
-    break;
-
   case 2:
     dayCount = 28;
     break;
