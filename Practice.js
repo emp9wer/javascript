@@ -168,7 +168,7 @@ return min
 }
 
 
-let numbers1 = new Array(1,4,63,5,2,1,-98,6,7,2);
+let numbers1 = new Array(1,4,63,5,2,1,-98,6,7,2,2);
 
 console.log(findMin(numbers1));
 
@@ -176,6 +176,36 @@ let minimize = findMin;
 
 let z = minimize(numbers1)
 console.log(z);
+
+
+console.log("----------------SECOND MAX");
+
+function secondMax1(nums) {
+  let mySet = new Set()
+  let temp = 0
+
+  for(let ea of nums){  //(1,4,63,5,2,-98,6,7,2);
+      mySet.add(ea)
+  }  
+  for (let i = 0; i < mySet.length; i++) {
+   if( mySet[i+1]>mySet[i]){
+    temp=mySet[i]
+    mySet[i]=mySet[i+1]
+    mySet[i+1]=temp
+   }
+  }
+
+  let arrrr = new Array();
+ for (let e of mySet){
+  arrrr.concat(e);
+ }
+ console.log(arrrr[1]);
+return arrrr[1]
+
+}
+
+let arrayOfnums = new Array(1,1,2,4,6,4,7,2,7,68,25,25,25,22,22)
+console.log(secondMax1(arrayOfnums))
 
 
 
